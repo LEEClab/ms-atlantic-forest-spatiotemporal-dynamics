@@ -4,7 +4,7 @@ This repository shares the code and data from the manuscript by Vancine et al. *
 
 The repository presents four folders: `code`, `data`, `maps`, and `paper_figures`.
 
-<img align="center" width="200" src="/paper_figures/fig01.png">
+<img align="center" width="400" src="/paper_figures/fig01.png">
 
 ## code
 
