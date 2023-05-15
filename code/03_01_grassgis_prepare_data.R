@@ -2,6 +2,7 @@
 #' title: grass prepare data
 #' author: mauricio vancine
 #' date: 2022-11-23
+#' operational system: gnu/linux - ubuntu - pop_os
 #' ----
 
 # prepare r -------------------------------------------------------------
@@ -21,7 +22,7 @@ rgrass::initGRASS(gisBase = system("grass --config path", inter = TRUE),
                   override = TRUE)
 
 # years
-years <- c(1986, 1990, 1995, 2000, 2005, 2010, 2015, 2020)[c(1, 8)]
+years <- c(1986, 1990, 1995, 2000, 2005, 2010, 2015, 2020)
 years
 
 # region

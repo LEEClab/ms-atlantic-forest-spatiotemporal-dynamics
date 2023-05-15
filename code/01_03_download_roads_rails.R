@@ -2,6 +2,7 @@
 #' title: download roads and rails
 #' author: mauricio vancine
 #' date: 2022-11-19
+#' operational system: gnu/linux - ubuntu - pop_os
 #' ----
 
 # prepare r ---------------------------------------------------------------

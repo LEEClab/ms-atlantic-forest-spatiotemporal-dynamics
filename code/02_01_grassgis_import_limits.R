@@ -2,6 +2,7 @@
 #' title: grassdb import limits
 #' author: mauricio vancine
 #' date: 2022-11-01
+#' operational system: gnu/linux - ubuntu - pop_os
 #' ----
 
 # prepare r -------------------------------------------------------------

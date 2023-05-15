@@ -1,7 +1,8 @@
 #' ----
-#' title: grassdb mapbiomas 1985-2021
+#' title: grassdb mapbiomas 1986-2020
 #' author: mauricio vancine
 #' date: 2022-10-27
+#' operational system: gnu/linux - ubuntu - pop_os
 #' ----
 
 # prepare r -------------------------------------------------------------
@@ -84,7 +85,7 @@ for(i in years){
 
 # export
 rgrass::execGRASS(cmd = "g.region", flags = c("a", "p"), raster = "mapbiomas_brazil_af_trinacional_1985", res = "00:00:01")
-rgrass::execGRASS(cmd = "r.mask", vector = "af_lim")
+rgrass::execGRASS(cmd = "r.mask", flags = "overwrite", vector = "af_lim")
 
 for(i in years){
 
@@ -93,7 +94,7 @@ for(i in years){
                     flags = c("c", "overwrite"),
                     input = paste0("mapbiomas_brazil_af_trinacional_", i),
                     output = paste0("01_data/02_mapbiomas/01_adjusted/mapbiomas_brazil_af_trinacional_af_lim_", i, ".tif"),
-                    createopt = "COMPRESS=DEFLATE")
+                    createopt = "TFW=TRUE,COMPRESS=DEFLATE,BIGTIFF=YES")
 
   rgrass::execGRASS("r.mapcalc",
                     flags = "overwrite",
@@ -102,7 +103,7 @@ for(i in years){
                     flags = c("c", "overwrite"),
                     input = paste0("mapbiomas_brazil_af_trinacional_", i, "_forest"),
                     output = paste0("01_data/02_mapbiomas/01_adjusted/mapbiomas_brazil_af_trinacional_af_lim_", i, "_forest.tif"),
-                    createopt = "COMPRESS=DEFLATE")
+                    createopt = "TFW=TRUE,COMPRESS=DEFLATE,BIGTIFF=YES")
 
   rgrass::execGRASS("r.mapcalc",
                     flags = "overwrite",
@@ -111,7 +112,7 @@ for(i in years){
                     flags = c("c", "overwrite"),
                     input = paste0("mapbiomas_brazil_af_trinacional_", i, "_natural"),
                     output = paste0("01_data/02_mapbiomas/01_adjusted/mapbiomas_brazil_af_trinacional_af_lim_", i, "_natural.tif"),
-                    createopt = "COMPRESS=DEFLATE")
+                    createopt = "TFW=TRUE,COMPRESS=DEFLATE,BIGTIFF=YES")
 
 }
 
@@ -142,7 +143,7 @@ rgrass::initGRASS(gisBase = system("grass --config path", inter = TRUE),
 rgrass::execGRASS(cmd = "g.region", flags = c("a", "p"), vector = "af_lim", res = "30")
 
 # mask
-rgrass::execGRASS(cmd = "r.mask", flags = "overwrite", vector = "af_lim")
+# rgrass::execGRASS(cmd = "r.mask", flags = "overwrite", vector = "af_lim")
 
 # import
 for(i in years){
@@ -157,14 +158,11 @@ for(i in years){
                     flags = "overwrite",
                     expression = paste0("mapbiomas_brazil_af_trinacional_", i, "_af_lim = mapbiomas_brazil_af_trinacional_", i))
 
-  # rgrass::execGRASS(cmd = "g.remove",
-  #                   flags = "f",
-  #                   type = "raster",
-  #                   name = paste0("mapbiomas_brazil_af_trinacional_", i))
+  rgrass::execGRASS(cmd = "g.remove",
+                    flags = "f",
+                    type = "raster",
+                    name = paste0("mapbiomas_brazil_af_trinacional_", i))
 
 }
-
-# remove mask
-rgrass::execGRASS(cmd = "r.mask", flags = "r")
 
 # end ---------------------------------------------------------------------
