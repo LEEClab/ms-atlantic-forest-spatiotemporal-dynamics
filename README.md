@@ -1,4 +1,4 @@
-# Spatio-temporal dynamics of forest and natural vegetation remnants in a tropical biodiversity hotspot
+# The Atlantic Forests of South America: spatiotemporal dynamic of remaining vegetation and implications for conservation
 
 This repository shares the code and data from the manuscript by Vancine et al. *in prep*.
 
@@ -43,11 +43,11 @@ TODO
 
 ## Citation
 
-Vancine, M. H., Niebuhr, B. B., Muylaert, R. L., Oshima, J. E. F., Tonetti, V. R., Bernardo, R., Grohmann, C. H., Ribeiro, M. C. Spatio-temporal dynamics of forest and natural vegetation remnants in a tropical biodiversity hotspot. *in prep.* 
+Vancine MH, Muylaert RL, Niebuhr BB, Oshima JEF, Tonetti V, Bernardo R, De Angelo C, Rosa MR, Grohmann CH, Ribeiro MC. The Atlantic Forests of South America: spatiotemporal dynamic of remaining vegetation and implications for conservation. *in prep.* 
 
 You can also cite this repository, which contains both the code and data used in the publication:  
 
-Vancine, M. H., Niebuhr, B. B., Muylaert, R. L., Oshima, J. E. F., Tonetti, V. R., Bernardo, R., Grohmann, C. H., Ribeiro, M. C. Spatio-temporal dynamics of forest and natural vegetation remnants in a tropical biodiversity hotspot. *in prep.* (Version 1.0) [Code and data set]. Zenodo.   
+Vancine MH, Muylaert RL, Niebuhr BB, Oshima JEF, Tonetti V, Bernardo R, De Angelo C, Rosa MR, Grohmann CH, Ribeiro MC. The Atlantic Forests of South America: spatiotemporal dynamic of remaining vegetation and implications for conservation. *in prep.* (Version 1.0) [Code and data set]. Zenodo.   
 
 [![DOI](https://zenodo.org/badge/225414362.svg)]()
 
@@ -60,6 +60,6 @@ No info from this study on the news yet.
 If you have questions or suggestions, do not hesitate to contact us:
 
 + Maurício Vancine <<mauricio.vancine@gmail.com>>
-+ Bernardo Santos <<bernardo_brandaum@yahoo.com.br>>
 + Renata Muylaert <<renatamuy@gmail.com>>
++ Bernardo Santos <<bernardo_brandaum@yahoo.com.br>>
 + Milton Cezar Ribeiro <<milton.c.ribeiro@unesp.br>>>
