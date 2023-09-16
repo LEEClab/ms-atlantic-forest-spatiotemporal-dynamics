@@ -1,5 +1,5 @@
 #' ----
-#' title: download mapbiomas
+#' title: spatiotemporal dynamic atlantic forest - download mapbiomas
 #' author: mauricio vancine
 #' date: 2022-11-19
 #' operational system: gnu/linux - ubuntu - pop_os
@@ -18,8 +18,8 @@ options(timeout = 1e5)
 # prepare rgee ------------------------------------------------------------
 
 # install
-# rgee::ee_install(py_env = "rgee")
-# rgee::ee_clean_pyenv()
+rgee::ee_install(py_env = "rgee")
+rgee::ee_clean_pyenv()
 
 # check
 rgee::ee_check()

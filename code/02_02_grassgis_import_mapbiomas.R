@@ -1,5 +1,5 @@
 #' ----
-#' title: grassdb mapbiomas 1986-2020
+#' title: spatiotemporal dynamic atlantic forest - import mapbiomas 1986-2020
 #' author: mauricio vancine
 #' date: 2022-10-27
 #' operational system: gnu/linux - ubuntu - pop_os
@@ -25,7 +25,7 @@ rgrass::initGRASS(gisBase = system("grass --config path", inter = TRUE),
                   mapset = "PERMANENT",
                   override = TRUE)
 
-# import limits
+# import limit
 rgrass::execGRASS("v.in.ogr",
                   flags = c("overwrite"),
                   input = "01_data/01_limits/01_af_limit/ma_limite_integrador_muylaert_et_al_2018_wgs84_geodesic_v1_2_0.shp",
@@ -143,7 +143,7 @@ rgrass::initGRASS(gisBase = system("grass --config path", inter = TRUE),
 rgrass::execGRASS(cmd = "g.region", flags = c("a", "p"), vector = "af_lim", res = "30")
 
 # mask
-# rgrass::execGRASS(cmd = "r.mask", flags = "overwrite", vector = "af_lim")
+rgrass::execGRASS(cmd = "r.mask", flags = "overwrite", vector = "af_lim")
 
 # import
 for(i in years){

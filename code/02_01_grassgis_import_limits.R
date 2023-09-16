@@ -1,5 +1,5 @@
 #' ----
-#' title: grassdb import limits
+#' title: spatiotemporal dynamic atlantic forest - import limits
 #' author: mauricio vancine
 #' date: 2022-11-01
 #' operational system: gnu/linux - ubuntu - pop_os
@@ -59,24 +59,17 @@ rgrass::execGRASS(cmd = "v.import",
 rgrass::execGRASS(cmd = "v.import",
                   flags = "overwrite",
                   input = "01_data/01_limits/01_af_limit/ma_limite_integrador_muylaert_et_al_2018_wgs84_geodesic_v1_2_0_br.shp",
-                  output = "af_lim_br")
+                  output = "af_lim_brazil")
 
 rgrass::execGRASS(cmd = "v.import",
                   flags = "overwrite",
                   input = "01_data/01_limits/01_af_limit/ma_limite_integrador_muylaert_et_al_2018_wgs84_geodesic_v1_2_0_ar.shp",
-                  output = "af_lim_ar")
+                  output = "af_lim_argentina")
 
 rgrass::execGRASS(cmd = "v.import",
                   flags = "overwrite",
                   input = "01_data/01_limits/01_af_limit/ma_limite_integrador_muylaert_et_al_2018_wgs84_geodesic_v1_2_0_py.shp",
-                  output = "af_lim_py")
-
-# import ecoregions limit
-rgrass::execGRASS(cmd = "v.import",
-                  flags = "overwrite",
-                  input = "01_data/01_limits/03_ecoregions/ecoregions_2017_af_wgs84_geodesic.gpkg",
-                  output = "af_ecoregions2017_eco")
-
+                  output = "af_lim_paraguay")
 
 # rasterize ---------------------------------------------------------------
 

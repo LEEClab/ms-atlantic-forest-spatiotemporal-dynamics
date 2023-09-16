@@ -1,5 +1,5 @@
 #' ----
-#' title: grass prepare data
+#' title: spatiotemporal dynamic atlantic forest - prepare data
 #' author: mauricio vancine
 #' date: 2022-11-23
 #' operational system: gnu/linux - ubuntu - pop_os
@@ -53,7 +53,7 @@ for(i in years){
 
 }
 
-# delete forest in roads ---------------------------------------------------
+# delete forest in roads and railways -----------------------------------
 
 # delete national roads
 for(i in years){
@@ -62,19 +62,19 @@ for(i in years){
 
   rgrass::execGRASS("r.mapcalc",
                     flags = "overwrite",
-                    expression = paste0("mapbiomas_brazil_af_trinacional_", i, "_af_lim_forest_roads_rails=if(roads_rails_af == 1 & mapbiomas_brazil_af_trinacional_", i, "_af_lim_forest == 1, 0, mapbiomas_brazil_af_trinacional_", i, "_af_lim_forest)"))
+                    expression = paste0("mapbiomas_brazil_af_trinacional_", i, "_af_lim_forest_roads_railways=if(roads_railways_af == 1 & mapbiomas_brazil_af_trinacional_", i, "_af_lim_forest == 1, 0, mapbiomas_brazil_af_trinacional_", i, "_af_lim_forest)"))
 
   rgrass::execGRASS("r.mapcalc",
                     flags = "overwrite",
-                    expression = paste0("mapbiomas_brazil_af_trinacional_", i, "_af_lim_natural_roads_rails=if(roads_rails_af == 1 & mapbiomas_brazil_af_trinacional_", i, "_af_lim_natural == 1, 0, mapbiomas_brazil_af_trinacional_", i, "_af_lim_natural)"))
+                    expression = paste0("mapbiomas_brazil_af_trinacional_", i, "_af_lim_natural_roads_railways=if(roads_railways_af == 1 & mapbiomas_brazil_af_trinacional_", i, "_af_lim_natural == 1, 0, mapbiomas_brazil_af_trinacional_", i, "_af_lim_natural)"))
 
   rgrass::execGRASS("r.mapcalc",
                     flags = "overwrite",
-                    expression = paste0("mapbiomas_brazil_af_trinacional_", i, "_af_lim_forest_classes_roads_rails=if(roads_rails_af == 1 & mapbiomas_brazil_af_trinacional_", i, "_af_lim_forest_classes != 0 , 0, mapbiomas_brazil_af_trinacional_", i, "_af_lim_forest_classes)"))
+                    expression = paste0("mapbiomas_brazil_af_trinacional_", i, "_af_lim_forest_classes_roads_railways=if(roads_railways_af == 1 & mapbiomas_brazil_af_trinacional_", i, "_af_lim_forest_classes != 0 , 0, mapbiomas_brazil_af_trinacional_", i, "_af_lim_forest_classes)"))
 
   rgrass::execGRASS("r.mapcalc",
                     flags = "overwrite",
-                    expression = paste0("mapbiomas_brazil_af_trinacional_", i, "_af_lim_natural_classes_roads_rails=if(roads_rails_af == 1 & mapbiomas_brazil_af_trinacional_", i, "_af_lim_natural_classes != 0 , 0, mapbiomas_brazil_af_trinacional_", i, "_af_lim_natural_classes)"))
+                    expression = paste0("mapbiomas_brazil_af_trinacional_", i, "_af_lim_natural_classes_roads_railways=if(roads_railways_af == 1 & mapbiomas_brazil_af_trinacional_", i, "_af_lim_natural_classes != 0 , 0, mapbiomas_brazil_af_trinacional_", i, "_af_lim_natural_classes)"))
 
 
 }
