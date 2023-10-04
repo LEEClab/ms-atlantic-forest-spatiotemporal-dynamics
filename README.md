@@ -18,16 +18,16 @@ All analyses were performed in [R language](https://www.r-project.org/) and [GRA
 - `01_05_grassgis_import_indigenous_territories.R`: import indigenous territories into GRASS GIS
 - `03_01_grassgis_prepare_data.R`: prepare data on GRASS GIS
 - `03_02_grassgis_calculate_landscape_metrics.R`: calculate landscape metrics on GRASS GIS
-- `04_01_tables.R`: resume data on tables 
-- `04_02_figures.R`: create figures
+- `04_01_tables.R`: resume data on tables on R
+- `04_02_figures.R`: create figures on R
 
 ## Citation
 
-Vancine MH, Muylaert RL, Niebuhr BB, Oshima JEF, Tonetti V, Bernardo R, De Angelo C, Rosa MR, Grohmann CH, Ribeiro MC. The Atlantic Forest of South America: spatiotemporal dynamic of remaining vegetation and implications for conservation. *in prep.* 
+Vancine, M. H., Muylaert, R. L., Niebuhr, B. B., de Faria Oshima, J. E., Tonetti, V., Bernardo, R., De Angelo, C., Rosa, M. R., Grohmann, C. H., Ribeiro, M. C. The Atlantic Forest of South America: spatiotemporal dynamic of remaining vegetation and implications for conservation. *in prep.* 
 
-You can also cite this repository, which contains both the code and data used in the publication:  
+You can also cite this project, which contains both the code and data used in the publication:  
 
-Vancine MH, Muylaert RL, Niebuhr BB, Oshima JEF, Tonetti V, Bernardo R, De Angelo C, Rosa MR, Grohmann CH, Ribeiro MC. The Atlantic Forest of South America: spatiotemporal dynamic of remaining vegetation and implications for conservation. *in prep.* (Version 1.0) [Code and data set]. OSF.   
+Vancine, M. H., Muylaert, R. L., Niebuhr, B. B., de Faria Oshima, J. E., Tonetti, V., Bernardo, R., De Angelo, C., Rosa, M. R., Grohmann, C. H., Ribeiro, M. C. (2023, September 16). Atlantic Forest spatiotemporal dynamic. https://doi.org/10.17605/OSF.IO/RFWBZ
 
 ## On the Media
 

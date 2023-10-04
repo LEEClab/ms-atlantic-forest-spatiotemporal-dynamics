@@ -1,5 +1,5 @@
 #' ----
-#' title: spatiotemporal dynamic atlantic forest - download mapbiomas
+#' title: atlantic forest spatiotemporal dynamic - download mapbiomas
 #' author: mauricio vancine
 #' date: 2022-11-19
 #' operational system: gnu/linux - ubuntu - pop_os

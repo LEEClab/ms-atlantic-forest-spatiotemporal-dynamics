@@ -1,5 +1,5 @@
 #' ----
-#' title: spatiotemporal dynamic atlantic forest - import protected areas
+#' title: atlantic forest spatiotemporal dynamic - import protected areas
 #' author: mauricio vancine
 #' date: 2022-11-01
 #' operational system: gnu/linux - ubuntu - pop_os

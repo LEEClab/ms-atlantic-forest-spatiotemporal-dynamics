@@ -1,5 +1,5 @@
 #' ----
-#' title: spatiotemporal dynamic atlantic forest - import mapbiomas 1986-2020
+#' title: atlantic forest spatiotemporal dynamic - import mapbiomas 1986-2020
 #' author: mauricio vancine
 #' date: 2022-10-27
 #' operational system: gnu/linux - ubuntu - pop_os

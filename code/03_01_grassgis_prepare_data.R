@@ -1,5 +1,5 @@
 #' ----
-#' title: spatiotemporal dynamic atlantic forest - prepare data
+#' title: atlantic forest spatiotemporal dynamic - prepare data
 #' author: mauricio vancine
 #' date: 2022-11-23
 #' operational system: gnu/linux - ubuntu - pop_os
