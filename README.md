@@ -1,6 +1,6 @@
 # The Atlantic Forest of South America: spatiotemporal dynamics of remaining vegetation and implications for conservation
 
-This repository shares the code used on the manuscript by Vancine et al. *in prep*.
+This repository shares the code used on the manuscript by Vancine et al. https://doi.org/10.1101/2023.09.16.558076
 
 ## code
 
@@ -20,6 +20,14 @@ All analyses were performed in [R language](https://www.r-project.org/) and [GRA
 - `03_02_grassgis_calculate_landscape_metrics.R`: calculate landscape metrics on GRASS GIS
 - `04_01_tables.R`: resume data on tables on R
 - `04_02_figures.R`: create figures on R
+
+## figures
+
+All figures in the paper in high definition.
+
+## tables
+
+All tables in the paper.
 
 ## Citation
 

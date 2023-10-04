@@ -1,0 +1,21 @@
+limit,scenario,p,n_patches,total_area_ha,mean_area_ha
+lawaf2006,Forest vegetation (not trimmed),24.07,1788188,30992081,17.33
+lawaf2006,Forest vegetation (trimmed),24.03,1827380,30951928,16.94
+lawaf2006,Natural vegetation (not trimmed),35.98,1835652,46333549,25.24
+lawaf2006,Natural vegetation (trimmed),35.93,1892400,46264936,24.45
+dasilvacasteleti2003,Forest vegetation (not trimmed),23.18,1902365,31622147,16.62
+dasilvacasteleti2003,Forest vegetation (trimmed),23.15,1944184,31579924,16.24
+dasilvacasteleti2003,Natural vegetation (not trimmed),34.36,1933978,46875495,24.24
+dasilvacasteleti2003,Natural vegetation (trimmed),34.31,1993589,46806306,23.48
+ibge2004,Forest vegetation (not trimmed),26.06,1641173,29122577,17.74
+ibge2004,Forest vegetation (trimmed),26.02,1679756,29083232,17.31
+ibge2004,Natural vegetation (not trimmed),31.84,1671550,35586103,21.29
+ibge2004,Natural vegetation (trimmed),31.79,1722521,35529739,20.63
+ibge2019,Forest vegetation (not trimmed),26.5,1649485,29326354,17.78
+ibge2019,Forest vegetation (trimmed),26.47,1688418,29286695,17.35
+ibge2019,Natural vegetation (not trimmed),31.5,1662346,34859089,20.97
+ibge2019,Natural vegetation (trimmed),31.45,1711606,34805009,20.33
+ecoregions2017,Forest vegetation (not trimmed),26.7,1796063,32173468,17.91
+ecoregions2017,Forest vegetation (trimmed),26.67,1834102,32133736,17.52
+ecoregions2017,Natural vegetation (not trimmed),33.97,1767078,40934679,23.17
+ecoregions2017,Natural vegetation (trimmed),33.92,1821027,40870573,22.44
