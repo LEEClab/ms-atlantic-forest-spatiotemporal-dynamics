@@ -1,4 +1,4 @@
-# The Atlantic Forest of South America: spatiotemporal dynamic of remaining vegetation and implications for conservation
+# The Atlantic Forest of South America: spatiotemporal dynamics of remaining vegetation and implications for conservation
 
 This repository shares the code used on the manuscript by Vancine et al. *in prep*.
 
@@ -23,7 +23,7 @@ All analyses were performed in [R language](https://www.r-project.org/) and [GRA
 
 ## Citation
 
-Vancine, M. H., Muylaert, R. L., Niebuhr, B. B., de Faria Oshima, J. E., Tonetti, V., Bernardo, R., De Angelo, C., Rosa, M. R., Grohmann, C. H., Ribeiro, M. C. The Atlantic Forest of South America: spatiotemporal dynamic of remaining vegetation and implications for conservation. *in prep.* 
+Vancine, M. H., Muylaert, R. L., Niebuhr, B. B., de Faria Oshima, J. E., Tonetti, V., Bernardo, R., De Angelo, C., Rosa, M. R., Grohmann, C. H., Ribeiro, M. C. The Atlantic Forest of South America: spatiotemporal dynamics of remaining vegetation and implications for conservation. https://doi.org/10.1101/2023.09.16.558076 
 
 You can also cite this project, which contains both the code and data used in the publication:  
 
