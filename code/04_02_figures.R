@@ -103,8 +103,8 @@ data_fig03
 
 ### plot ----
 plot_fig03a <- ggplot(data = data_fig03,
-                     aes(x = year, y = n_patches, color = scenario,
-                         fill = scenario, group = scenario)) +
+                      aes(x = year, y = n_patches, color = scenario,
+                          fill = scenario, group = scenario)) +
   geom_line(aes(linetype = scenario), linewidth = 2) +
   geom_point(size = 4, shape = 21, stroke = 1.5) +
   geom_vline(xintercept = 5.2, color = "gray66", linewidth = 1.5, lty = 1) +
@@ -986,9 +986,9 @@ plot_fig06_forest_trimmed_mean <- data_fig06 %>%
   theme_bw(base_size = 20) +
   theme(legend.position = c(.1, .7),
         axis.text.y = element_text(angle = 90, hjust = .5))
-plot_fig06_forest_not_trimmed_mean
-ggsave(filename = "04_figures/fig06_forest_not_trimmed_mean.png",
-       plot = plot_fig06_forest_not_trimmed_mean,
+plot_fig06_forest_trimmed_mean
+ggsave(filename = "04_figures/fig06_forest_trimmed_mean.png",
+       plot = plot_fig06_forest_trimmed_mean,
        wi = 25, he = 20, un = "cm", dpi = 300)
 
 plot_fig06_natural_not_trimmed_mean <- data_fig06 %>%
@@ -1417,7 +1417,7 @@ ggsave(filename = "04_figures/fig08_forest_trimmed_it.png",
        plot = plot_fig08_forest_trimmed_it,
        wi = 35, he = 25, un = "cm", dpi = 300)
 
-plot_fig08_natural_trimmed_it <- data_fig08_it %>%
+plot_fig08_natural_not_trimmed_it <- data_fig08_it %>%
   dplyr::filter(scenario == "Natural vegetation (not trimmed)") %>%
   ggplot(aes(x = class, y = area_ha_total)) +
   geom_bar(stat = "identity", fill = c("#ff8800", rep("#fec882", 10))) +
@@ -1428,9 +1428,9 @@ plot_fig08_natural_trimmed_it <- data_fig08_it %>%
   theme_bw(base_size = 25) +
   theme(axis.text.x = element_text(size = 15),
         axis.text.y = element_text(angle = 90, hjust = .5))
-plot_fig08_natural_trimmed_it
-ggsave(filename = "04_figures/fig08_natural_trimmed_it.png",
-       plot = plot_fig08_natural_trimmed_it,
+plot_fig08_natural_not_trimmed_it
+ggsave(filename = "04_figures/fig08_natural_not_trimmed_it.png",
+       plot = plot_fig08_natural_not_trimmed_it,
        wi = 35, he = 25, un = "cm", dpi = 300)
 
 plot_fig08_natural_trimmed_it <- data_fig08_it %>%
