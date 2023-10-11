@@ -1,5 +1,5 @@
 #' ----
-#' title: atlantic forest spatiotemporal dynamic - import indigenous territory
+#' title: atlantic forest spatiotemporal dynamics - import indigenous territories
 #' author: mauricio vancine
 #' date: 2023-04-10
 #' operational system: gnu/linux - ubuntu - pop_os
@@ -31,7 +31,7 @@ af_lim
 # import data -------------------------------------------------------------
 
 # import ----
-ti_br <- sf::st_read("01_data/06_indigenous_territory/indigenous_territory_brazil_wgs84_geo.shp") %>%
+ti_br <- sf::st_read("01_data/06_indigenous_territories/indigenous_territories_brazil_wgs84_geo.shp") %>%
   sf::st_make_valid() %>%
   sf::st_transform(sf::st_crs(af_lim)) %>%
   sf::st_intersection(af_lim) %>%
@@ -41,10 +41,10 @@ ti_br <- sf::st_read("01_data/06_indigenous_territory/indigenous_territory_brazi
   terra::vect()
 
 rgrass::write_VECT(x = ti_br,
-                   vname = "indigenous_territory_brazil",
+                   vname = "indigenous_territories_brazil",
                    flags = c("overwrite", "quiet"))
 
-ti_py <- sf::st_read("01_data/06_indigenous_territory/indigenous_territory_paraguay_wgs84_geo.shp") %>%
+ti_py <- sf::st_read("01_data/06_indigenous_territories/indigenous_territories_paraguay_wgs84_geo.shp") %>%
   sf::st_make_valid() %>%
   sf::st_transform(sf::st_crs(af_lim)) %>%
   sf::st_intersection(af_lim) %>%
@@ -55,13 +55,13 @@ ti_py <- sf::st_read("01_data/06_indigenous_territory/indigenous_territory_parag
 ti_py
 
 rgrass::write_VECT(x = ti_py,
-                   vname = "indigenous_territory_paraguay",
+                   vname = "indigenous_territories_paraguay",
                    flags = c("overwrite", "quiet"))
 
 rgrass::execGRASS(cmd = "v.patch",
                   flags = c("overwrite", "quiet"),
-                  input = "indigenous_territory_brazil,indigenous_territory_paraguay",
-                  output = "indigenous_territory")
+                  input = "indigenous_territories_brazil,indigenous_territories_paraguay",
+                  output = "indigenous_territories")
 
 # rasterize ---------------------------------------------------------------
 
@@ -74,26 +74,26 @@ rgrass::execGRASS(cmd = "r.mask", vector = "af_lim")
 # rasterize
 rgrass::execGRASS(cmd = "v.to.rast",
                   flags = c("overwrite"),
-                  input = "indigenous_territory",
-                  output = "indigenous_territory_null",
+                  input = "indigenous_territories",
+                  output = "indigenous_territories_null",
                   use = "val")
 
 # zero
 rgrass::execGRASS(cmd = "r.mapcalc",
                   flags = c("overwrite"),
-                  expression = "indigenous_territory=if(isnull(indigenous_territory_null), 0, 1)")
+                  expression = "indigenous_territories=if(isnull(indigenous_territories_null), 0, 1)")
 
 # export ------------------------------------------------------------------
 
 # export
 rgrass::execGRASS(cmd = "r.out.gdal",
                   flags = "overwrite",
-                  input = "indigenous_territory_null",
-                  output = "01_data/06_indigenous_territory/indigenous_territory_sirgas2000_albers_brazil.tif",
+                  input = "indigenous_territories_null",
+                  output = "01_data/06_indigenous_territories/indigenous_territories_sirgas2000_albers_brazil.tif",
                   createopt = "TFW=TRUE,COMPRESS=DEFLATE,BIGTIFF=YES")
 
 # area
-r <- terra::rast("01_data/06_indigenous_territory/indigenous_territory_sirgas2000_albers_brazil.tif")
+r <- terra::rast("01_data/06_indigenous_territories/indigenous_territories_sirgas2000_albers_brazil.tif")
 rf <- terra::freq(r)
 rf[3]*900/1e4
 (rf[3]*900/1e4)/162742129*100

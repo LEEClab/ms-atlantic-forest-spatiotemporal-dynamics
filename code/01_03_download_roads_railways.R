@@ -1,5 +1,5 @@
 #' ----
-#' title: atlantic forest spatiotemporal dynamic - download roads and railways
+#' title: atlantic forest spatiotemporal dynamics - download roads and railways
 #' author: mauricio vancine
 #' date: 2022-11-19
 #' operational system: gnu/linux - ubuntu - pop_os

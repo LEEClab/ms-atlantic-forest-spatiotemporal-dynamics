@@ -1,5 +1,5 @@
 #' ----
-#' title: atlantic forest spatiotemporal dynamic - download and prepare limits
+#' title: atlantic forest spatiotemporal dynamics - download and prepare limits
 #' author: mauricio vancine
 #' date: 2022-11-24
 #' operational system: gnu/linux - ubuntu - pop_os

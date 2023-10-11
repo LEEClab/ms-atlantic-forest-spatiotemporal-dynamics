@@ -1,5 +1,5 @@
 #' ----
-#' title: atlantic forest spatiotemporal dynamic - calculate landscape metrics
+#' title: atlantic forest spatiotemporal dynamics - calculate landscape metrics
 #' author: mauricio vancine
 #' date: 2023-03-06
 #' operational system: gnu/linux - ubuntu - pop_os
