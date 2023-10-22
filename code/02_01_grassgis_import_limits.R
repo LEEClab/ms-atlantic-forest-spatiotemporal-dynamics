@@ -42,7 +42,7 @@ rgrass::execGRASS(cmd = "v.import",
 rgrass::execGRASS(cmd = "v.import",
                   flags = "overwrite",
                   input = "01_data/01_limits/01_af_limit/limit_af_ribeiroetal2009_gcs_wgs84.shp",
-                  output = "af_lim_ribeiro_etal2009")
+                  output = "af_lim_dasilvacasteleti2003")
 
 rgrass::execGRASS(cmd = "v.import",
                   flags = "overwrite",
@@ -51,8 +51,8 @@ rgrass::execGRASS(cmd = "v.import",
 
 rgrass::execGRASS(cmd = "v.import",
                   flags = "overwrite",
-                  input = "01_data/01_limits/01_af_limit/limit_af_wwf_terr_ecos_biorregions_2017_gcs_wgs84.shp",
-                  output = "af_ecoregions2017")
+                  input = "01_data/01_limits/01_af_limit/limit_af_wwf_terr_ecos_gcs_wgs84.shp",
+                  output = "af_lim_ecoregions2017")
 
 
 # import countries limit
@@ -75,8 +75,15 @@ rgrass::execGRASS(cmd = "v.import",
 
 # limits
 rgrass::execGRASS(cmd = "v.to.rast", flags = "overwrite", use = "val", input = "af_lim", output = "af_lim")
+
 rgrass::execGRASS(cmd = "v.to.rast", flags = "overwrite", use = "val", input = "af_lim_br", output = "af_lim_br")
 rgrass::execGRASS(cmd = "v.to.rast", flags = "overwrite", use = "val", input = "af_lim_ar", output = "af_lim_ar")
 rgrass::execGRASS(cmd = "v.to.rast", flags = "overwrite", use = "val", input = "af_lim_py", output = "af_lim_py")
+
+rgrass::execGRASS(cmd = "v.to.rast", flags = "overwrite", use = "val", input = "af_lim_ibge2004", output = "af_lim_ibge2004")
+rgrass::execGRASS(cmd = "v.to.rast", flags = "overwrite", use = "val", input = "af_lim_ibge2019", output = "af_lim_ibge2019")
+rgrass::execGRASS(cmd = "v.to.rast", flags = "overwrite", use = "val", input = "af_lim_dasilvacasteleti2003", output = "af_lim_dasilvacasteleti2003")
+rgrass::execGRASS(cmd = "v.to.rast", flags = "overwrite", use = "val", input = "af_lim_lawaf2006", output = "af_lim_lawaf2006")
+rgrass::execGRASS(cmd = "v.to.rast", flags = "overwrite", use = "val", input = "af_lim_ecoregions2017", output = "af_lim_ecoregions2017")
 
 # end ---------------------------------------------------------------------

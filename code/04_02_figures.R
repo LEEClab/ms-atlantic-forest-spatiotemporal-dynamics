@@ -18,7 +18,9 @@ options(scipen = 1000)
 
 ## data ----
 data_fig01 <- readr::read_csv("03_tables/data_fig01.csv") %>%
+  dplyr::mutate(class_n_per = round(class_n_per, 2)) %>%
   dplyr::mutate(class_n_per = ifelse(class_n_per < 0.01, "<0.01", class_n_per)) %>%
+  dplyr::mutate(class_n_per = ifelse(class_area_per == 0, "0", class_n_per)) %>%
   dplyr::mutate(class = forcats::as_factor(class)) %>%
   dplyr::mutate(class = forcats::fct_relevel(class,
                                              c("<1", "1-5", "5-10", "10-50",
@@ -55,7 +57,7 @@ for(i in unique(data_fig01$year)){
         #                              "#fed18a", "#fee8a5", "#ffffc0", "#e6f4a7", "#cce98f",
         #                              "#b3de76", "#92cf64", "#6abc58", "#42a94d", "#1a9641")) +
         coord_flip() +
-        labs(title = paste0(j, "(", i, ")"), x = "Class of fragment size (ha)", y = "Area (ha) (millions)") +
+        labs(title = paste0(j, " (", i, ")"), x = "Class of fragment size (ha)", y = "Area (ha) (millions)") +
         # scale_y_continuous(breaks = c(0, 5e6, 1e7, 1.5e7, 2e7),
         #                    label = c("0", "5", "10", "15", "20")) +
         ylim(c(0, 17.5)) +
@@ -76,7 +78,7 @@ for(i in unique(data_fig01$year)){
         #                              "#fed18a", "#fee8a5", "#ffffc0", "#e6f4a7", "#cce98f",
         #                              "#b3de76", "#92cf64", "#6abc58", "#42a94d", "#1a9641")) +
         coord_flip() +
-        labs(title = paste0(j, "(", i, ")"), x = "Class of fragment size (ha)", y = "Area (ha) (millions)") +
+        labs(title = paste0(j, " (", i, ")"), x = "Class of fragment size (ha)", y = "Area (ha) (millions)") +
         ylim(c(0, 45)) +
         theme_bw(base_size = 20) +
         theme(legend.position = "none",
@@ -87,7 +89,7 @@ for(i in unique(data_fig01$year)){
     }
 
     # export
-    ggsave(filename = paste0("04_figures/fig01/fig01_", i, "_", gsub("[()]", "", gsub(" ", "_", tolower(j))), ".png"),
+    ggsave(filename = paste0("04_figures/fig01_", i, "_", gsub("[()]", "", gsub(" ", "_", tolower(j))), ".png"),
            plot = plot_fig01, wi = 25, he = 20, un = "cm", dpi = 300)
 
   }
@@ -103,8 +105,8 @@ data_fig03
 
 ### plot ----
 plot_fig03a <- ggplot(data = data_fig03,
-                      aes(x = year, y = n_patches, color = scenario,
-                          fill = scenario, group = scenario)) +
+                     aes(x = year, y = n_patches, color = scenario,
+                         fill = scenario, group = scenario)) +
   geom_line(aes(linetype = scenario), linewidth = 2) +
   geom_point(size = 4, shape = 21, stroke = 1.5) +
   geom_vline(xintercept = 5.2, color = "gray66", linewidth = 1.5, lty = 1) +
@@ -386,7 +388,7 @@ plot_fig04_natural_not_trimmed_br
 ggsave(paste0("04_figures/fig04_natural_not_trimmed_br.png"),
        plot_fig04_natural_not_trimmed_br, wi = 25, he = 20, un = "cm", dpi = 300)
 
-plot_fig04_natural_not_trimmed_br <- data_fig04 %>%
+plot_fig04_natural_trimmed_br <- data_fig04_br %>%
   dplyr::filter(classes != 0,
                 scenario == "Natural vegetation (trimmed)") %>%
   # ggplot(aes(x = year, y = p, fill = forcats::fct_relevel(classes,
@@ -423,9 +425,9 @@ plot_fig04_natural_not_trimmed_br <- data_fig04 %>%
         axis.text.x = element_text(size = 15),
         axis.text.y = element_text(size = 9),
         strip.text = element_text(size = 10))
-plot_fig04_natural_not_trimmed_br
-ggsave(paste0("04_figures/fig04_natural_not_trimmed_br.png"),
-       plot_fig04_natural_not_trimmed_br, wi = 25, he = 20, un = "cm", dpi = 300)
+plot_fig04_natural_trimmed_br
+ggsave(paste0("04_figures/fig04_natural_trimmed_br.png"),
+       plot_fig04_natural_trimmed_br, wi = 25, he = 20, un = "cm", dpi = 300)
 
 
 ### data argentina ----
@@ -479,9 +481,9 @@ plot_fig04_forest_trimmed_ar <- data_fig04_ar %>%
         title = element_text(size = 20),
         axis.text.x = element_text(size = 15),
         strip.text = element_text(size = 10))
-plot_fig04_forest_not_trimmed_ar
-ggsave(paste0("04_figures/fig04_forest_not_trimmed_ar.png"),
-       plot_fig04_forest_not_trimmed_ar, wi = 25, he = 20, un = "cm", dpi = 300)
+plot_fig04_forest_trimmed_ar
+ggsave(paste0("04_figures/fig04_forest_trimmed_ar.png"),
+       plot_fig04_forest_trimmed_ar, wi = 25, he = 20, un = "cm", dpi = 300)
 
 plot_fig04_natural_not_trimmed_ar <- data_fig04_ar %>%
   dplyr::filter(classes != 0,
@@ -1184,7 +1186,7 @@ plot_fig07_forest_trimmed_mean <- data_fig07 %>%
   theme(legend.position = c(.09, .6),
         axis.text.y = element_text(angle = 90, hjust = .5))
 plot_fig07_forest_trimmed_mean
-ggsave(filename = "04_figures/fig07_forest_trimmed_mea.png",
+ggsave(filename = "04_figures/fig07_forest_trimmed_mean.png",
        plot = plot_fig07_forest_trimmed_mean,
        wi = 25, he = 20, un = "cm", dpi = 300)
 

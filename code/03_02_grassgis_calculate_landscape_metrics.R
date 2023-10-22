@@ -1,5 +1,5 @@
 #' ----
-#' title: atlantic forest spatiotemporal dynamics - calculate landscape metrics
+#' title: atlantic forest spatiotemporal dynamic - calculate landscape metrics
 #' author: mauricio vancine
 #' date: 2023-03-06
 #' operational system: gnu/linux - ubuntu - pop_os
@@ -15,7 +15,7 @@ library(rgrass)
 
 # connect
 rgrass::initGRASS(gisBase = system("grass --config path", inter = TRUE),
-                  gisDbase = "01_data/00_grassdb",
+                  gisDbase = "01_data/00_grassdb_fix/",
                   location = "sirgas2000_albers",
                   mapset = "PERMANENT",
                   override = TRUE)
@@ -526,7 +526,7 @@ rgrass::execGRASS(cmd = "r.mask", flags = "overwrite", vector = "af_lim")
 ## scenarios ----
 scenarios_habitat_cover <- crossing(years,
                                     veg = c("_af_lim_forest_classes", "_af_lim_natural_classes"),
-                                    road = c("", "_roads_railways"))
+                                    road = c("_trimmed"))
 scenarios_habitat_cover <- apply(scenarios_habitat_cover, 1, paste0, collapse = "")
 scenarios_habitat_cover
 
@@ -539,7 +539,7 @@ for(i in scenarios_habitat_cover){
                     flags = c("a", "c", "n", "p", "overwrite"),
                     separator = ",",
                     input = paste0("mapbiomas_brazil_af_trinacional_", i),
-                    output = paste0("02_results/01_mapbiomas_brazil_af_trinacional_", i, "_habitat_cover.csv"))
+                    output = paste0("02_results/02_mapbiomas_brazil_af_trinacional_", i, "_habitat_cover.csv"))
 
 }
 
@@ -555,7 +555,7 @@ for(i in scenarios_habitat_cover){
                     flags = c("a", "c", "n", "p", "overwrite"),
                     separator = ",",
                     input = paste0("mapbiomas_brazil_af_trinacional_", i),
-                    output = paste0("02_results/01_mapbiomas_brazil_af_trinacional_", i, "_habitat_cover_br.csv"))
+                    output = paste0("02_results/02_mapbiomas_brazil_af_trinacional_", i, "_habitat_cover_br.csv"))
 
 }
 
@@ -571,7 +571,7 @@ for(i in scenarios_habitat_cover){
                     flags = c("a", "c", "n", "p", "overwrite"),
                     separator = ",",
                     input = paste0("mapbiomas_brazil_af_trinacional_", i),
-                    output = paste0("02_results/01_mapbiomas_brazil_af_trinacional_", i, "_habitat_cover_ar.csv"))
+                    output = paste0("02_results/02_mapbiomas_brazil_af_trinacional_", i, "_habitat_cover_ar.csv"))
 
 }
 
@@ -587,12 +587,12 @@ for(i in scenarios_habitat_cover){
                     flags = c("a", "c", "n", "p", "overwrite"),
                     separator = ",",
                     input = paste0("mapbiomas_brazil_af_trinacional_", i),
-                    output = paste0("02_results/01_mapbiomas_brazil_af_trinacional_", i, "_habitat_cover_py.csv"))
+                    output = paste0("02_results/02_mapbiomas_brazil_af_trinacional_", i, "_habitat_cover_py.csv"))
 
 }
 
 ## calculation limits ----
-for(i in c("af_lim_ibge2004", "af_lim_lawaf2006", "af_lim_ribeiro_etal2009",
+for(i in c("af_lim_ibge2004", "af_lim_lawaf2006", "af_lim_dasilvacasteleti2003",
            "af_lim_ecoregions2017", "af_lim_ibge2019")){
 
   print(i)
@@ -612,7 +612,7 @@ for(i in c("af_lim_ibge2004", "af_lim_lawaf2006", "af_lim_ribeiro_etal2009",
                       flags = c("a", "c", "n", "p", "overwrite"),
                       separator = ",",
                       input = paste0("mapbiomas_brazil_af_trinacional_2020_af_lim_", j),
-                      output = paste0("02_results/01_mapbiomas_brazil_af_trinacional_2020_", i, "_", j,  "_habitat_cover.csv"))
+                      output = paste0("02_results/02_mapbiomas_brazil_af_trinacional_2020_", i, "_", j,  "_habitat_cover.csv"))
 
   }
 

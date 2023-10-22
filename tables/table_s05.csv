@@ -1,9 +1,0 @@
-period,scenario,value_balance_area_total,percentage_balance_area_total,value_balance_patches_number,value_gain_patches_area_mn,value_loss_patches_area_mn
-1986-2005,FV not trimmed,-4871398,-2.99,-242715,1.14,1.35
-1986-2005,FV trimmed,-4870967,-2.99,-242678,1.12,1.33
-1986-2005,NV not trimmed,-5564348,-3.42,-227621,1.11,1.21
-1986-2005,NV trimmed,-5566273,-3.42,-226734,1.08,1.2
-2005-2020,FV not trimmed,990517,0.61,373616,1.08,0.97
-2005-2020,FV trimmed,980447,0.6,385798,1.06,0.96
-2005-2020,NV not trimmed,-234427,-0.14,301911,1.06,0.96
-2005-2020,NV trimmed,-243945,-0.15,314062,1.03,0.94

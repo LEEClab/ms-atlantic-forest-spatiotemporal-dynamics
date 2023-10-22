@@ -1,5 +1,5 @@
 #' ----
-#' title: atlantic forest spatiotemporal dynamics - import indigenous territories
+#' title: atlantic forest spatiotemporal dynamic - import indigenous territories
 #' author: mauricio vancine
 #' date: 2023-04-10
 #' operational system: gnu/linux - ubuntu - pop_os
