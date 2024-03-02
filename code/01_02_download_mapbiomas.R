@@ -35,7 +35,7 @@ years <- c(1986, 1990, 1995, 2000, 2005, 2010, 2015, 2020)
 years
 
 # mapbiomas brazil
-url <- paste0("https://storage.googleapis.com/mapbiomas-public/brasil/collection-6/lclu/coverage/brasil_coverage_", years, ".tif")
+url <- paste0("https://storage.googleapis.com/mapbiomas-public/brasil/collection-7/lclu/coverage/brasil_coverage_", years, ".tif")
 url
 
 destfiles <- paste0("01_data/02_mapbiomas/00_raw/00_mapbiomas_brazil/mapbiomas_v7_", basename(url))
