@@ -49,4 +49,4 @@ If you have questions or suggestions, do not hesitate to contact us:
 + Maurício Vancine <<mauricio.vancine@gmail.com>>
 + Renata Muylaert <<renatamuy@gmail.com>>
 + Bernardo Santos <<bernardo_brandaum@yahoo.com.br>>
-+ Milton Cezar Ribeiro <<milton.c.ribeiro@unesp.br>>>
++ Milton Cezar Ribeiro <<milton.c.ribeiro@unesp.br>>
