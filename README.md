@@ -40,7 +40,7 @@ Vancine, M. H., Muylaert, R. L., Niebuhr, B. B., de Faria Oshima, J. E., Tonetti
 ## On the Media
 
 + [Novo estudo destaca preocupação com estado de conservação da Mata Atlântica.](https://jornal.unesp.br/2024/03/15/novo-estudo-destaca-preocupacao-com-estado-de-conservacao-da-mata-atlantica/)
-
++ [Pesquisa da Unesp aponta melhora na conservação da Mata Atlântica.](https://record.r7.com/recordtv-interior-sp/sp-record/pesquisa-da-unesp-aponta-melhora-na-conservacao-da-mata-atlantica-27032024/?utm_source=link_direto&utm_medium=share-bar&utm_campaign=r7-topo)
 ## Contact
 
 If you have questions or suggestions, do not hesitate to contact us:
