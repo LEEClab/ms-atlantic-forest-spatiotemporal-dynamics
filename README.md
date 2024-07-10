@@ -38,7 +38,7 @@ You can also cite this project, which contains both the code and data used in th
 Vancine, M. H., Muylaert, R. L., Niebuhr, B. B., de Faria Oshima, J. E., Tonetti, V., Bernardo, R., De Angelo, C., Rosa, M. R., Grohmann, C. H., Ribeiro, M. C. (2024, March 02). Atlantic Forest spatiotemporal dynamic. https://doi.org/10.17605/OSF.IO/RFWBZ
 
 ## On the Media
-+ [Folha: Novo estudo destaca preocupação com estado de conservação da Mata Atlântica.]([https://jornal.unesp.br/2024/03/15/novo-estudo-destaca-preocupacao-com-estado-de-conservacao-da-mata-atlantica/](https://www1.folha.uol.com.br/folha-social-mais/2024/06/novo-estudo-destaca-preocupacao-com-estado-de-conservacao-da-mata-atlantica.shtml?utm_campaign=na_midia__n_23_junho_2024&utm_medium=email&utm_source=RD+Station))
++ [Folha: Novo estudo destaca preocupação com estado de conservação da Mata Atlântica.](https://www1.folha.uol.com.br/folha-social-mais/2024/06/novo-estudo-destaca-preocupacao-com-estado-de-conservacao-da-mata-atlantica.shtml?utm_campaign=na_midia__n_23_junho_2024&utm_medium=email&utm_source=RD+Station)
 + [Jornal Unesp: Novo estudo destaca preocupação com estado de conservação da Mata Atlântica.](https://jornal.unesp.br/2024/03/15/novo-estudo-destaca-preocupacao-com-estado-de-conservacao-da-mata-atlantica/)
 + [Record: Pesquisa da Unesp aponta melhora na conservação da Mata Atlântica.](https://record.r7.com/recordtv-interior-sp/sp-record/pesquisa-da-unesp-aponta-melhora-na-conservacao-da-mata-atlantica-27032024/?utm_source=link_direto&utm_medium=share-bar&utm_campaign=r7-topo)
 + [Ekos Brasil: Unidades de Conservação: guardiãs da Mata Atlântica](https://www.ekosbrasil.org/unidades-de-conservacao-guardias-da-mata-atlantica/)
